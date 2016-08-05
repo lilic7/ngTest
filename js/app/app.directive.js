@@ -5,6 +5,9 @@
   AppDirective = function() {
     return {
       restrict: 'E',
+      scope: {
+        size: "@"
+      },
       controller: "AppController",
       controllerAs: 'appCtrl',
       templateUrl: "app.template.html"

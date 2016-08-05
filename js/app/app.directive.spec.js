@@ -3,12 +3,13 @@
   describe("UNIT: app.directive", function() {
     var element;
     element = null;
-    beforeEach(module("app.directive", "cache.tpl"));
-    beforeEach(inject(function($compile, $rootScope, $templateCache) {
+    beforeEach(module("app.directive"));
+    beforeEach(module("app.template.html"));
+    beforeEach(inject(function($compile, $rootScope) {
       var scope;
       scope = $rootScope.$new();
       scope.size = 50;
-      element = $templateCache.get('app.template.html');
+      element = angular.element("<the-directive size='30'></the-directive>");
       $compile(element)(scope);
       scope.$digest();
     }));
