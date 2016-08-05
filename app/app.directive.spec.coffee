@@ -1,17 +1,18 @@
 describe "UNIT: app.directive", ->
-  $compile = null
-  $rootScope = null
+  element = null
 
-  beforeEach module "app.directive"
+  beforeEach module "app.directive", "cache.tpl"
 
-  beforeEach inject (_$compile_, _$rootScope_)->
-    $compile = _$compile_
-    $rootScope = _$rootScope_
+
+  beforeEach inject ($compile, $rootScope, $templateCache)->
+    scope = $rootScope.$new()
+    scope.size = 50
+    element = $templateCache.get 'app.template.html'
+    $compile(element)(scope)
+    scope.$digest()
     return
 
-
   it "should display THE DIRECTIVE message ", ->
-      element = $compile("<the-directive></the-directive>")($rootScope)
-      expect(element.html).toMatch(/THE DIRECTIVE/)
+      expect(element.html()).toMatch(/THE DIRECTIVE/)
       return
   return

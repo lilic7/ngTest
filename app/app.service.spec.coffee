@@ -12,10 +12,16 @@ describe "UNIT: app.service", ->
         .toBeDefined()
       return
 
-  it "should calculate max of two numbers", ->
+  it "should return second value of two numbers", ->
       result = appService.max 2, 5
       expect result
         .toEqual 5
+      return
+
+  it "should return first value of two numbers", ->
+      result = appService.max 8, 5
+      expect result
+        .toEqual 8
       return
 
   it "should return message if numbers are equal", ->

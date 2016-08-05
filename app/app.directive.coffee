@@ -1,12 +1,11 @@
-AppDirective = (AppController)->
-  directive =
-    restrict: 'E'
-    controller: AppController
+AppDirective = ()->
+  {
+    restrict    : 'E'
+    controller  : "AppController"
     controllerAs: 'appCtrl'
-    template: "<div>THE DIRECTIVE</div>"
-  directive
+    templateUrl : "app.template.html"
+  }
 
-AppDirective.$inject = ['AppController']
 angular
   .module "app.directive",
   [

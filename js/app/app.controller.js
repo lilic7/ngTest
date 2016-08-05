@@ -9,9 +9,9 @@
     app.max = function(a, b) {
       return AppService.max(a, b);
     };
-    return;
-    return AppController.$inject = ['app.service'];
   };
+
+  AppController.$inject = ['AppService'];
 
   angular.module("app.controller", ['app.service']).controller("AppController", AppController);
 

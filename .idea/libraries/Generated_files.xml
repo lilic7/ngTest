@@ -2,12 +2,12 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/js/app/app.directive.js" />
-        <item url="file://$PROJECT_DIR$/js/app/app.controller.js" />
-        <item url="file://$PROJECT_DIR$/js/app/app.service.js" />
-        <item url="file://$PROJECT_DIR$/js/app/app.controller.spec.js" />
-        <item url="file://$PROJECT_DIR$/js/app/app.service.spec.js" />
         <item url="file://$PROJECT_DIR$/js/app/app.directive.spec.js" />
+        <item url="file://$PROJECT_DIR$/js/app/app.service.spec.js" />
+        <item url="file://$PROJECT_DIR$/js/app/app.controller.spec.js" />
+        <item url="file://$PROJECT_DIR$/js/app/app.service.js" />
+        <item url="file://$PROJECT_DIR$/js/app/app.controller.js" />
+        <item url="file://$PROJECT_DIR$/js/app/app.directive.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -29,12 +29,12 @@
       <root url="file://$PROJECT_DIR$/js/node_modules/karma-coverage/examples/coffee/test.js" />
       <root url="file://$PROJECT_DIR$/js/node_modules/karma-coverage/examples/coffee-requirejs/test.js" />
       <root url="file://$PROJECT_DIR$/js/app/app.spec.js" />
-      <root url="file://$PROJECT_DIR$/js/app/app.directive.js" />
-      <root url="file://$PROJECT_DIR$/js/app/app.controller.js" />
-      <root url="file://$PROJECT_DIR$/js/app/app.service.js" />
-      <root url="file://$PROJECT_DIR$/js/app/app.controller.spec.js" />
-      <root url="file://$PROJECT_DIR$/js/app/app.service.spec.js" />
       <root url="file://$PROJECT_DIR$/js/app/app.directive.spec.js" />
+      <root url="file://$PROJECT_DIR$/js/app/app.service.spec.js" />
+      <root url="file://$PROJECT_DIR$/js/app/app.controller.spec.js" />
+      <root url="file://$PROJECT_DIR$/js/app/app.service.js" />
+      <root url="file://$PROJECT_DIR$/js/app/app.controller.js" />
+      <root url="file://$PROJECT_DIR$/js/app/app.directive.js" />
     </CLASSES>
     <SOURCES />
   </library>

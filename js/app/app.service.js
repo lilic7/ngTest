@@ -3,10 +3,9 @@
   var AppService, max;
 
   AppService = function() {
-    var appSrv;
-    appSrv = {};
-    appSrv.max = max;
-    return appSrv;
+    return {
+      max: max
+    };
   };
 
   max = function(a, b) {

@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: './',
 
 
     // frameworks to use
@@ -19,7 +19,16 @@ module.exports = function(config) {
       'public/assets/libs/angular-material/angular-material.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'public/assets/libs/angular-route/angular-route.js',
-      'js/app/**/*.js'
+      'js/app/**/*.js',
+      'js/**/*.html'
+    ],
+
+    plugins: [
+        'karma-jasmine',
+        'karma-spec-reporter',
+        'karma-coverage',
+        'karma-chrome-launcher',
+        'karma-ng-html2js-preprocessor'
     ],
 
 
@@ -27,12 +36,16 @@ module.exports = function(config) {
     exclude: [
     ],
 
-
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'js/app/**/*.!(spec).js': 'coverage',
+      'js/app/**/*.html': ['ng-html2js']
     },
 
+    ngHtml2JsPreprocessor: {
+      moduleName: 'cache.tpl'
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'

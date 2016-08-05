@@ -1,8 +1,8 @@
 AppService = ->
     #add code here
-    appSrv = {}
-    appSrv.max = max
-    appSrv
+    {
+      max: max
+    }
 #all fuctions definition comes here
 max = (a, b)->
   if a is b 

@@ -10,10 +10,15 @@
     it("should exist", function() {
       expect(appService).toBeDefined();
     });
-    it("should calculate max of two numbers", function() {
+    it("should return second value of two numbers", function() {
       var result;
       result = appService.max(2, 5);
       expect(result).toEqual(5);
+    });
+    it("should return first value of two numbers", function() {
+      var result;
+      result = appService.max(8, 5);
+      expect(result).toEqual(8);
     });
     it("should return message if numbers are equal", function() {
       var result;

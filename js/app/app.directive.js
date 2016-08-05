@@ -2,18 +2,14 @@
 (function() {
   var AppDirective;
 
-  AppDirective = function(AppController) {
-    var directive;
-    directive = {
+  AppDirective = function() {
+    return {
       restrict: 'E',
-      controller: AppController,
+      controller: "AppController",
       controllerAs: 'appCtrl',
-      template: "<div>THE DIRECTIVE</div>"
+      templateUrl: "app.template.html"
     };
-    return directive;
   };
-
-  AppDirective.$inject = ['AppController'];
 
   angular.module("app.directive", ['app.controller']).directive("theDirective", AppDirective);
 
