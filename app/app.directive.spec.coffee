@@ -1,21 +1,45 @@
 describe "UNIT: app.directive", ->
-  element = null
+  $rootScope = null
+  $scope = null
+  $compile = null
+  el = null
+  $el = null
+  $body = $('body')
+  simpleHtml = "<the-directive></the-directive>"
 
-  beforeEach module "app.directive"
+  beforeEach ->
+    module 'app.directive', 'templates'
 
-  beforeEach module "app.template.html"
+    inject ($injector)->
+      $rootScope = $injector.get "$rootScope"
+      $compile = $injector.get "$compile"
 
+      $scope = $rootScope.$new()
+      el = $compile(angular.element simpleHtml)($scope)
+      return
 
-  beforeEach inject ($compile, $rootScope)->
-    scope = $rootScope.$new()
-    scope.size = 50
-    element = angular.element "<the-directive size='30'></the-directive>"
-    $compile(element)(scope)
-    scope.$digest()
+    $body.append el
+    $rootScope.$digest()
+    $el = $("#bloc")
     return
 
-  it "should display THE DIRECTIVE message ", ->
-      expect(element.html()).toMatch(/THE DIRECTIVE/)
+  afterEach ->
+    $body.empty()
+    return
+
+  it "should render the directive out in the DOM", ->
+      expect($el.length).toEqual 1
       return
+    
+  it "should show the title", ->
+      expect($el.find("#title").text()).toEqual "appCtrl title"
+      return
+
+  describe "test title modification", ->
+    ctrl = null
+    beforeEach ->
+      
+      return
+    return
 
   return

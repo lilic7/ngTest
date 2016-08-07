@@ -17,8 +17,10 @@ module.exports = function(config) {
     files: [
       'public/assets/libs/angular/angular.js',
       'public/assets/libs/angular-material/angular-material.js',
-      'node_modules/angular-mocks/angular-mocks.js',
       'public/assets/libs/angular-route/angular-route.js',
+      'public/assets/libs/jquery/dist/jquery.min.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+
       'js/app/**/*.js',
       'js/**/*.html'
     ],
@@ -44,8 +46,8 @@ module.exports = function(config) {
     },
 
     ngHtml2JsPreprocessor: {
-      stripPrefix: 'js/app/'
-      //moduleName: 'cache.tpl'
+      stripPrefix: 'js/app/',
+      moduleName: 'templates'
     },
 
     // test results reporter to use
